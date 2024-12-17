@@ -43,6 +43,5 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/../libs)
 install(TARGETS ${PROJECT_NAME} DESTINATION ${cmake_files_install_dir})
 install(FILES ${CMAKE_BINARY_DIR}/../imgui.h
         DESTINATION include RENAME imgui.h)
-install(FILES ${CMAKE_BINARY_DIR}/../src/arkamys/protocol/arkamys_protocol.hpp 
-        DESTINATION include/protocol)
+
 
