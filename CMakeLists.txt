@@ -6,6 +6,7 @@ project(imgui_glfw LANGUAGES CXX)
 
 
 add_library(${PROJECT_NAME} SHARED backends/imgui_impl_glfw.cpp
+                                    backends/imgui_impl_opengl3.cpp
                                     misc/cpp/imgui_stdlib.cpp
                                     imgui_draw.cpp 
                                     imgui_tables.cpp
@@ -43,5 +44,9 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/../libs)
 install(TARGETS ${PROJECT_NAME} DESTINATION ${cmake_files_install_dir})
 install(FILES ${CMAKE_BINARY_DIR}/../imgui.h
         DESTINATION include RENAME imgui.h)
+install(FILES ${CMAKE_BINARY_DIR}/../backends/imgui_impl_glfw.h
+        DESTINATION include RENAME imgui_impl_glfw.h)
+install(FILES ${CMAKE_BINARY_DIR}/../backends/imgui_impl_opengl3.h
+        DESTINATION include RENAME imgui_impl_opengl3.h)
 
 
