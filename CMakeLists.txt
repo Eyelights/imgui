@@ -11,6 +11,7 @@ add_library(${PROJECT_NAME} SHARED backends/imgui_impl_glfw.cpp
                                     imgui_draw.cpp 
                                     imgui_tables.cpp
                                     imgui_widgets.cpp
+                                    imgui_demo.cpp
                                     imgui.cpp)
 
 include_directories(./backends)
@@ -48,5 +49,7 @@ install(FILES ${CMAKE_BINARY_DIR}/../backends/imgui_impl_glfw.h
         DESTINATION include RENAME imgui_impl_glfw.h)
 install(FILES ${CMAKE_BINARY_DIR}/../backends/imgui_impl_opengl3.h
         DESTINATION include RENAME imgui_impl_opengl3.h)
+install(FILES ${CMAKE_BINARY_DIR}/../imconfig.h
+        DESTINATION include RENAME imconfig.h)
 
 
